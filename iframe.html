@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        input[type=button]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 18px;
+    }
+    input[type=text]{
+        width: 50%;
+        height: 2.1em;
+        font-size: 1.2em;
+    }
+    input:hover{
+        color: blue;
+        background-color: lightcoral;
+    }
+    iframe{
+    border: 2px solid green;
+    height: 85em;
+    width: 97.5%;
+}
+    </style>
+    <script>
+        var t1,t2,t3;
+        t1="<iframe src='";
+        t3="'></iframe>"
+        function show(){
+        t2=document.getElementById("text").value;
+        document.getElementById("iframe").innerHTML = t1+t2+t3;
+    }
+    </script>
+    <title>Iframe</title>
+</head>
+<body>
+    <h1>Type an URL below and click on the button!</h1>
+    <input type="text" id="text"><br>
+    <input type="button" onclick="show()" value="Show the page">
+    <br><br>
+    <div id="iframe">
+        <br>
+        <i>(The page will be shown here)</i>
+    </div>
+</body>
+</html>

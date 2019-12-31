@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style0.css">
+    <link rel="shortcut icon" href="../pic/xz.jpg">
+    <title>Online Calculator</title>
+</head>
+<body>
+    <h2>Welcome to use the online calculator!</h2>
+    <br>
+    <input type="button" id="id0" value=0 onclick="n0('id0')">
+    <input type="button" id="id1" value=1 onclick="n0('id1')">
+    <input type="button" id="id2" value=2 onclick="n0('id2')">
+    <input type="button" id="id3" value=3 onclick="n0('id3')">
+    <input type="button" id="id4" value=4 onclick="n0('id4')">
+    <input type="button" id="id5" value=5 onclick="n0('id5')">
+    <input type="button" id="id6" value=6 onclick="n0('id6')">
+    <input type="button" id="id7" value=7 onclick="n0('id7')">
+    <input type="button" id="id8" value=8 onclick="n0('id8')">
+    <input type="button" id="id9" value=9 onclick="n0('id9')">
+    <input type="button" id="id10" value="+" onclick="pluss()">
+    <input type="button" id="id11" value="-" onclick="minuss()">
+    <input type="button" id="id12" value="=" onclick="equals()">
+    <br><br><hr>
+    <p id="demo"><i>(Results will be shown here)</i></p>
+    <script>
+        var num=0;
+        var out=0;
+        var plus=0;
+        var minus=0;
+        var num2=0;
+        var num0=0;
+        function pluss(){
+            plus=1;
+            minus=0;
+            if(out==0){
+            num0=num2;
+            }
+            num2=0;
+        }
+        function minuss(){
+            minus=1;
+            plus=0;
+            if(out==0){
+            num0=num2;
+            }
+            num2=0;
+        }
+        function n0(x){
+            if(plus+minus==0 && out!=0){
+                out=0
+            }
+            num=Number(document.getElementById(x).value);
+            num2=Number(num2+num.toString());
+        document.getElementById("demo").innerHTML=num2;
+        }
+        function equals(){
+            if(plus==1){
+                out=num0+num2+out;
+                if(out==0){
+                    num2=0;
+                }
+            }else if(minus==1){
+                out=num0-num2+out;
+                if(out==0){
+                    num2=0;
+                }
+            }else{
+                out=num2;
+                num2=0;
+            }
+            document.getElementById("demo").innerHTML=out;
+            plus=0;
+            minus=0;
+            num0=0;
+            num2=0;
+        }
+    </script>
+    <br><br><br>
+    <p id="zx">Designed and Created By<br>
+    <a href="https://personal.cs.cityu.edu.hk/~xzhang2487/" id="link0" target="_blank">
+    ZHANG Xun 
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+</body>
+</html>

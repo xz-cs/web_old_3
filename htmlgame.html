@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML game</title>
+    <style>
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+
+        body > button {
+            position: absolute;
+            top: 3px;
+        }
+    </style>
+    <script>
+        var andiv, str, num;
+
+        function init() {
+            andiv = document.querySelector("#animate");
+            andiv.style.left = "12px";
+        }
+
+        function move() {
+            str = andiv.style.left;
+            num = Number(str.slice(0, str.search("p")));
+            num += 103;
+            andiv.style.left = num + "px";
+        }
+
+        function re() {
+            andiv.style.left = "12px";
+        }
+    </script>
+</head>
+<body onload="init()">
+<br><br>
+<div id="animate" onmouseover="move()">
+    <button onclick="alert('You win!!!')">Click me!!!</button>
+</div>
+<br>
+<button onclick="re()">[Replay]</button>
+</body>
+</html>

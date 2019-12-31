@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of Form & Video</title>
+</head>
+<body>
+    <h1>Like your video - A survey</h1>
+    <hr><br>
+    <form method="GET" action="https://courses.cs.cityu.edu.hk/cs2204/t5b-echo.html">
+        <label for="firstname">Your first name: </label>
+        <input type="text" id="firstname" name="firstname" value="first name">
+        <br><br>
+        <label>Your Age Group:</label>
+        <br>
+        <input type="radio" name="agegroup" value="11-20" id="11-20">
+        <label for="11-20">11-20</label>
+        <br>
+        <input type="radio" name="agegroup" value="21-40" id="21-40">
+        <label for="21-40">21-40</label>
+        <br>
+        <input type="radio" name="agegroup" value="41-60" id="41-60">
+        <label for="41-60">41-60</label>
+        <br><br>
+        <video controls>
+            <source src="https://courses.cs.cityu.edu.hk/cs2204/nature.mp4" type="video/mp4">
+            <source src="https://courses.cs.cityu.edu.hk/cs2204/nature.ogg" type="video/ogg">
+            <h2>Your browser does not support this video format</h2>
+        </video>
+        <input type="checkbox" name="nature" value="nature" id="nature">
+        <label for="nature"> like</label>
+        <br><br>
+        <video controls>
+            <source src="https://courses.cs.cityu.edu.hk/cs2204/wonders.mp4" type="video/mp4">
+            <source src="https://courses.cs.cityu.edu.hk/cs2204/wonders.ogg" type="video/ogg">
+            <h2>Your browser does not support this video format</h2>
+        </video>
+        <input type="checkbox" name="wonders" value="wonders" id="wonders">
+        <label for="wonders"> like</label>
+        <br><br>
+        <input type="submit" value="OK">
+        <input type="reset" value="clear">
+        <br><br>
+    </form>
+</body>
+</html>
