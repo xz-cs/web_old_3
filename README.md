@@ -1,8 +1,8 @@
 <html>
 	<head>
-		<meta http-equiv="refresh" content="0;URL=http://www.cb.cityu.edu.hk/ac/">
+		<meta http-equiv="refresh" content="0;URL=https://xz-cs.github.io/web/index.html">
 		<title>Redirecting...</title>
-		<script type="text/javascript" language="JavaScript">
+		<script>
 
 			function document_onLoad()
 			{
