@@ -3,7 +3,7 @@ let links, vinfo, vcode;
 
 function init() {
     document.getElementById("content2").innerHTML = '<h2>And if you want to...</h2><p id="p1"><a href="schedule.html" target="_blank">Contact me?<br><br></a><a href="joinscratch.html" target="_blank">Join me in scratch?</a><br><br><a href="games.html" target="_blank">Play a game?</a><br><br><a href="calculator" target="_blank">Try out my online calculator?</a><br><br></p>';
-    document.getElementById("no").innerHTML = '<h4>See a video taken by me on the top of Hall 4 (extended)!</h4><video controls src="video/alt_video.MOV"></video>';
+    document.getElementById("no").innerHTML = '<h4>See a video taken by me on the top of Hall 4 (extended)!</h4><video controls src="video/video.MOV"></video>';
     courses_rows = document.querySelectorAll("tbody tr");
     for (let i = 0; i < courses_rows.length; i++) {
         courses_rows[i].onclick = navigate;
